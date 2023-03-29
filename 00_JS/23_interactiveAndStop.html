@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Interactive and Stop</title>
+	<script type="text/javascript">
+		
+		let alarm = setTimeout( () => {alert("You need to do your homework!")},3000);
+
+
+		function startStopAlarm() {
+
+			if (document.querySelector("#status").innerHTML === "On"){
+				clearTimeout(alarm);
+				document.querySelector("#status").innerHTML = "Off";
+				document.querySelector("button").innerHTML = "Start Alarm";
+				document.querySelector("img").src = "23_pat.jpg";
+			} else {
+				document.querySelector("#status").innerHTML = "On";
+				document.querySelector("button").innerHTML = "Stop Alarm";
+				alarm = setTimeout( () => {alert("You need to do your homework!")},3000);
+				document.querySelector("img").src = "23_pic.png";
+			}
+
+			
+		}
+	</script>
+</head>
+<body>
+	<img src="23_pic.png" style="width:100px; display:block; margin-left:auto; margin-right: auto;">
+	<h1 style="text-align:center;">Alarm <span id="status">On</span></h1>
+	<button onclick="startStopAlarm()" style="display:block; margin-left:auto; margin-right: auto;">Stop Alarm</button>
+</body>
+</html>

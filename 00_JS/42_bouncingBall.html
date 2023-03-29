@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas" width="500" height="500" style="background-color: darkmagenta;"></canvas>
+    <script src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
+    <script type="text/javascript">
+        let canvas = $('canvas');
+        let ctx = canvas[0].getContext('2d');
+        let iamspeed = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+        canvas.clearCanvas = () => {
+
+            ctx.clearRect(0, 0, canvas[0].width, canvas[0].height);
+        }
+
+        function circle(x, y, radius, color, isFilled) {
+            ctx.strokeStyle = color;
+            ctx.beginPath();
+            ctx.arc(x, y, radius, 0, 2*Math.PI, false);
+            ctx.stroke();
+            if (isFilled) {
+                ctx.fillStyle = color;
+                ctx.fill();
+            }
+        }
+
+        class Ball {
+
+            constructor(x, y){
+                this.x = x;
+                this.y = y;
+                this.color = "White";
+                this.radius = 13;
+
+                this.xSpeed = iamspeed[Math.floor(Math.random() * iamspeed.length)];
+                this.ySpeed = iamspeed[Math.floor(Math.random() * iamspeed.length)];
+            }
+
+            draw(){
+                circle(this.x, this.y, this.radius, this.color, true);
+            }
+
+            move(){
+                this.x += this.xSpeed;
+                this.y += this.ySpeed;
+            }
+
+            checkCollisionWithEdge(){
+
+                if (this.x < 0 || this.x > canvas[0].width){
+                    this.xSpeed = -this.xSpeed;
+                }
+
+                if (this.y < 0 || this.y > canvas[0].width){
+                    this.ySpeed = -this.ySpeed;      
+                }
+
+            }
+
+
+
+        }
+
+        let ball = new Ball(canvas[0].width/2, canvas[0].height/2);
+
+        let mainloop = setInterval( () => {
+
+            canvas.clearCanvas();
+            ball.draw();
+            ball.move();
+            ball.checkCollisionWithEdge();
+
+
+        }, 1);
+
+    </script>
+</body>
+</html>

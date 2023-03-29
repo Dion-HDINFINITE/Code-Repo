@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Object</title>
+</head>
+<body>
+	<script type="text/javascript">
+		
+		function sleep(argument) {
+			console.log("zzzzzz");
+		}
+
+		let pig = {
+			name : "pancake",
+			legs : 3,
+			isCute : true,
+
+			eat : function () {
+				console.log(`${this.name} is still eating ...`)
+			},
+
+			sleep : sleep,
+
+			// eat : false
+		}
+
+		pig.speak = function () {
+			console.log("oink oink ...");
+		}
+
+		// pig.eat();
+		// console.log(pig.eat);
+		pig.sleep();
+		pig.speak();
+
+		let dog = {
+			"name" : "arigatou",
+			"legs" : 5,
+			"isCute" : false
+		}
+
+		console.log(dog["name"]);
+		console.log(dog.legs);
+
+
+	</script>
+</body>
+</html>

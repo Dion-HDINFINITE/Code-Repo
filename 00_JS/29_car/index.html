@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Car Object</title>
+</head>
+<body>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript">
+		// Constructor ~ def __init__ di python
+		let Car = function (x, y) {
+			this.x = x;
+			this.y = y;
+			this.odometer = 0;
+
+			this.draw = function () {
+				let carImg = '<img src="car.png">';
+
+				this.carElement = $(carImg);
+				this.carElement.css({
+					position : "absolute",
+					left : this.x,
+					top : this.y
+				});
+
+				$('body').append(this.carElement);
+			}
+		}
+
+		Car.prototype.readOdometer = function () {
+			console.log(`Car : ${this.odometer} miles.`)
+		}
+
+		let tesla = new Car(100, 200);
+		tesla.draw();
+		tesla.readOdometer();
+
+	</script>
+</body>
+</html>
