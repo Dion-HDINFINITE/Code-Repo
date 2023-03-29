@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;700&family=Roboto+Condensed:ital@1&family=Square+Peg&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Roboto Condensed', sans-serif;
+    overflow-x: hidden;
+}
+
+header nav{
+    display: flex;
+    background-color: brown;
+    color: white;
+    justify-content: space-around;
+    height: 50px;
+    align-items: center;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+header nav ul li a:hover {
+    color: white;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+.btn-login {
+    background-color: black;
+    color: red;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 5px 12px;
+    border-radius: 30px;
+    transition: 2s;
+}
+
+.btn-login:hover {
+    transform: scale(1.2);
+}
+
+.menu-toggle{
+    display: none;
+}
+
+.menu-toggle span{
+    display: block;
+    width: 18px;
+    height: 3px;
+    background: white;
+    border-radius: 3px;
+}
+
+section.hero {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background: black url('../static/img/Villan.gif') center / cover no-repeat;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+h1, h3 {
+    color: black;
+}
+
+section.hero .hero-content {
+    margin-left: 10%;
+}
+
+section.hero .hero-content h1 {
+    color: red;
+    margin: 20px 8px 20px;
+    font-size: 3rem;
+}
+
+section.hero .hero-content h3 {
+    color: red;
+    margin: 20px 8px 20px;
+    font-size: 25px ;
+}
+
+section.hero .hero-content h3:after {
+    content: ' young one, choose wisely';
+}
+
+section.hero .hero-content .hero-form {
+    width: 200px;
+    max-width: 100%;
+}
+
+section.hero .hero-content .hero-form input:first-child {
+    width: 100%;
+    padding: 14px 13px 14px 15px;
+    border: 2px solid red;
+    border-radius: 30px;
+    margin-bottom: 10px;
+}
+
+section.hero .hero-content .hero-form input:last-child {
+    padding: 15px 20px;
+    border: 2px solid red;
+    border-radius: 30px;
+    margin-bottom: 70px;
+    background: black;
+    color: red;
+}
+
+@media screen and (max-width: 576px) {
+
+    header nav ul.menu-nav {
+        flex-direction: column;
+        justify-content: space-evenly;
+        position: absolute;
+        background-color: rgba(162, 30, 30, 0.8);
+        height: 100vh;
+        width: 25%;
+        top: 0;
+        right: 0;
+        margin-top: 50px;
+        padding-left: 10px;
+        transform: translateX(100%);
+    }
+
+    header nav ul.menu-nav.clicked {
+        transform: translateX(0);
+    }
+
+    header nav ul.menu-nav li a {
+        font-size: 18px;
+    }
+    
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        height: 14px;
+        justify-content: space-between;
+    }
+}
