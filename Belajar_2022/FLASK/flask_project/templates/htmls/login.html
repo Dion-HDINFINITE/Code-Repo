@@ -1,0 +1,36 @@
+{% extends 'html_layout.html' %}
+
+{% block title %}LOGIN{% endblock title %}
+
+{% block main %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Sign Up | By Code Info</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css')}}">
+  <head>
+    <title>Login | By Code Info</title>
+    <link rel="stylesheet" href="Css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="login-box">
+      <h1 class="log-sign">Login</h1>
+      <form>
+        <label>Email</label>
+        <input type="email" placeholder="" />
+        <label>Password</label>
+        <input type="password" placeholder="" />
+        <input type="submit" value="Sign Up" class="SU"/>
+      </form>
+    </div>
+    <p class="alred">
+      Don't have an account? <a href="{{ url_for('html_file', file='signup')}}">Sign Up Here!</a>
+    </p>
+  </body>
+</html>
+{% endblock main %}
+

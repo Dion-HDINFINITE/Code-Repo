@@ -1,0 +1,30 @@
+{% extends 'layout.html' %}
+
+{% block title %} Cancer Volunteering Sign up {% endblock title %}
+
+{% block main %} 
+<div class="hero-content">
+    <h1>Cancer Volunteer Programme</h1>
+    <h3>Sign up to volunteer</h3>
+</div>
+{% endblock main %}
+
+{% block log %}
+
+{% endblock log %}
+
+{% block content %}
+<div class="about-content">
+    <div class="about-content-item about-card">
+        <img src="{{ url_for('static', filename='nurse.png')}}" alt="">
+    </div>
+    <div class="about-content-item about-text">
+        <hr>
+        <h2>Brief History</h2>
+        <hr>
+        <p>
+            Established since 1960, the Double D Cancer centre. which mainly specialise on conducting research on various approaches to creating a possible cure to breast cancer. We have taken an oath to unsure all women around the globe, will receive such intensive care, and whilst also protecting and spreading awareness against the malicious effects that breast cancer is able to do in our daily lifes.               </p>
+    </div>
+</div>
+
+{% endblock content %}
