@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <p>This is Navigation</p>
+        </nav>
+    </header>
+    <section id="main-section">
+        {% block main %} 
+            <a href="{{ url_for('more') }}">More..</a>
+        {% endblock main %} 
+    </section>
+    <footer>
+        <p>Here you see footer!</p>
+        <a href="{{ url_for('index') }}">Back home!</a>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,15 @@
+{% extends 'layout.html' %} 
+
+{% block title %}Insert Photo / Image{% endblock title %} 
+
+{% block main %}
+
+<h1>Names</h1>
+    <img src="{{ url_for('static', filename='PenkAntar.png') }}" style="width: 50px;">
+    <ul>
+        {% for name in names %} 
+            <li>{{ name }}</li>
+        {% endfor %}
+    </ul>
+<a href="{{ url_for('more') }}">More info click here..</a>
+{% endblock main %}
