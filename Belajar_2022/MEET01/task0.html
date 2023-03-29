@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adding List</title>
+    <script>
+        document.addEventListener("DOMContentLoaded", function(){
+            document.querySelector("#submit-task").disabled = true;
+            document.querySelector("#entry-task").onkeyup = function () {
+                if (document.querySelector("#entry-task").value.trim().length > 0){
+                    document.querySelector("#submit-task").disabled =  false;
+                } else {
+                    document.querySelector("#submit-task").disabled = true;
+                }
+            }
+            document.querySelector("#form-task").onsubmit = function () {
+
+                const li = document.createElement("li");
+                li.innerHTML = document.querySelector("#entry-task").value; 
+                document.querySelector("#tasks").append(li);
+                document.querySelector("#entry-task").value = "";
+                document.querySelector("#submit-task").disabled = true;
+
+                return false;
+            }
+        })
+    </script>
+</head>
+<body>
+    <h1>Tugas Hari ini:</h1>
+    <ul id="tasks"></ul>
+    <form id="form-task">
+        <input type="text" name="" id="entry-task" placeholder="Masukkan Tugas Baru Hari Ini" autocomplete="off">
+        <input type="submit" name="" id="submit-task">
+    </form>
+    
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My First AJAX</title>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+
+        document.getElementById("change-btn").onclick = function(){
+
+            const response = new XMLHttpRequest();
+
+            response.onload = function(){
+                // yg dilkkn stlh sks mmnt, dn mndptkn data and hal yg dilkkan ktk ajax brhsl mndptkn data dr rspny.
+                document.querySelector(".content").innerHTML = 
+                this.responseText;
+            }
+
+            response.open("GET","ajax_info.txt");
+            response.send();
+
+            // document.querySelector(".content").innerHTML = "<h1>Changed!<h1>";
+
+        }
+
+        document.getElementById("change-second-btn").addEventListener("click", () =>
+        {
+
+            const response = new XMLHttpRequest();
+
+            response.onload = function(){
+
+                const result = JSON.parse(this.responseText);
+
+                // console.log(result);
+
+                document.querySelector(".second-content").innerHTML = result.code;
+            }
+
+            response.open("GET", "json_info.json");
+            response.send();
+
+        })
+
+        function thirdBtnClick(){
+            const response = new XMLHttpRequest();
+            Response.onload = function(){
+                const xmlDoc = this.responseXML;
+                const students = xmlDoc.getElementsByTagName("STUDENT");
+                firstStudentName = students[0].getElementsByTagName("NAME")[0].childNodes[0].nodeValue;
+
+                document.querySelector(".third-content").innerHTML = firstStudentName;
+            }
+            response.open("GET","xml_info.xml");
+            response.send();
+        }
+    });
+</script>
+</head>
+<body>
+    <h1>My Page</h1>
+    <div class="content">
+        <p>You can change this page!</p>
+        <button id="change-btn">Click here!</button>
+    </div>
+
+    <div class="second-content">
+        <p>YOU HAVE CHANHED!</p>
+        <button id="change-second-btn">Click Here!</button>
+    </div>
+
+    <div class="third-content">
+        <p>This is an XMLHttpRequest</p>
+        <button id="change-third-btn" onclick="thirdBtnClick()">Click Here!</button>
+    </div>
+</body>
+</html>

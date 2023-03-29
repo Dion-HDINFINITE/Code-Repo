@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>fix Position</title>
+</head>
+<style>
+
+    body {
+        height: 2000px;
+    }
+    div {
+        height: 200px;
+        width: 200px;
+        border: black 1px solid;
+        margin: 0px auto;
+    }
+
+    .satu {
+        background-color: green;
+    }
+
+    .dua {
+        background-color: yellow;
+        position: fixed;
+        height: 50px;
+        width: 100%;
+        top: 0px;
+        left: 0px;
+    }
+
+    .tiga {
+        background-color: orange;
+    }
+
+    .wrapper {
+        width: 800px;
+        height: 800px;
+        border: purple 10px solid;
+        position: relative;
+        margin-top: 55px;
+    }
+
+    .circle {
+        width: 50px;
+        height: 50px;
+        border: none;
+        border-radius: 25px;
+        background-color: green;
+        position: fixed;
+        bottom: 50px;
+        right: 50px;
+        font-size: 30px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+</style>
+<body>
+    <div class="wrapper">
+        <div class="satu"></div>
+        <div class="dua"></div>
+        <div class="tiga"></div>
+    </div>
+    <div class="circle">
+        <i class="bx bxs-chat"></i>
+    </div>
+</body>
+</html>
