@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List On React</title>
+    <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+    <style>
+        * {
+            padding: 1px;
+            margin: 1px;
+        }
+
+        body{
+            background-image: url(netes.avif);
+            background-size: cover;
+            background-repeat: no-repeat;
+            height: 80vh;
+        }
+
+        h2 {
+            font-family: 'Shantell Sans', cursive;
+        }
+
+        p {
+            font-family: 'Shantell Sans', cursive;
+        }
+ 
+        .list-container {
+            height: 100%;
+            width: 100%;
+            height: 100vh;
+            box-sizing: border-box;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: absolute;
+            margin-top: 7rem;
+        }
+        .list-title {
+            padding-right: 6%;
+        }
+
+        ul {
+            padding-right: 5%;
+            list-style: none;
+            font-family: 'Shantell Sans', cursive;
+        }
+
+        #no {
+            color: white;
+            background-color: red;
+            border-radius: 2rem;
+        }
+
+        #yes {
+            color: white;
+            background-color: lime;
+            border-radius: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div id="app"></div>
+    <script type="text/babel">
+ 
+        class ListApp extends React.Component {
+ 
+            constructor(props) {
+                super(props);
+                this.state = {
+                    tasks : ["Dishes", "Reaches", "Leaches"],
+                    input : "",
+                    background : ''
+                }
+            }
+ 
+            render = () => {
+                return (
+                    <div className="container">
+                        <div className="list-container">
+                            <h2 className="list-title">My To Do List :</h2>
+                            <ul style={{ background: this.state.background }}>
+                                {this.state.tasks.map((task, i) => (
+                                    <li key={i}>{i+1}. {task} <button id="yes" onClick={this.donetask}>✔</button> <button id="no" onClick={ () => this.deletetask(i) }>X</button> </li>
+                                ))}
+                            </ul>
+                            <br></br>
+                            <div>
+                                <input type="text" value={this.state.input} onChange={this.updateinput} onKeyPress={this.submitevent}/>
+                                <button onClick={this.addTask}>Add</button>
+                            </div>
+                            <p>Total amount of Tasks : {this.state.tasks.length}</p>
+                        </div>
+                    </div>
+                )
+            }
+ 
+            updateinput = event => {
+                this.setState({
+                    input : event.target.value
+                })
+            }
+ 
+            submitevent = event => {
+                if (event.key == "Enter") {
+                    this.addtask()
+                }
+            }
+ 
+            addtask = () => {
+                function invalidInput(input) {
+                    return !input.trim().length
+                }
+                if (invalidInput(this.state.input)) {
+                    alert("Please Write A Valid Task!")
+                } else {
+                    this.setState(state => ({
+                        tasks : [...state.tasks, state.input],
+                        input : ""
+                    }))
+                }
+            }
+ 
+            deletetask = index => {
+                this.setState(state => {
+                    const tasks = [...state.tasks];
+                    tasks.splice(index, 1);
+                    return {
+                        tasks : tasks
+                    }
+                })
+            }
+
+            donetask = () => {
+                this.setState(state => {
+                    return {
+                        background : 'lime'
+                    }
+                })
+            }
+        }
+ 
+        ReactDOM.render(<ListApp/>, document.getElementById("app"))
+ 
+    </script>
+</body>
+</html>
