@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Layout</title>
+    <style>
+        body {
+			margin: 0;
+			padding: 0;
+		}
+
+		header {
+			float: left;
+			width: 100%;
+            /* height: 50px; */
+			background-color: #7152f4;
+		}
+
+        header > img {
+            height: 50px;
+        }
+
+		header > img, header > h1 {
+			margin-right: 10px;
+			display: inline;
+		}
+        header > nav {
+            background-color: aliceblue;
+        }
+
+        header nav ul.container {
+            list-style-type: none;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+
+        header nav ul li a {
+            text-decoration: none;
+        }
+
+        header nav ul li {
+            display: inline;
+        }
+
+        .main {
+            display: grid;
+            width: 100%;
+            grid-template-columns: 200px auto 200px;
+        }
+
+        article {
+            grid-area: main;
+        }
+
+        aside.left {
+            order: -1;
+            width: 200px;
+			background-color: #52f471;
+        }
+
+        aside.right {
+            width: 125px;
+			background-color: #f452d5;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="https://cdn.discordapp.com/attachments/867712003496738816/1010123175293624341/twitter-logo.jpeg" alt="">
+        <h1>Welcome To IGS</h1>
+        <nav>
+                <ul class="container">
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About Me</a></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Github</a></li>
+                    <li><a href="#">Facebook</a></li>
+                </ul>
+        </nav>
+    </header>
+    <section class="main">
+        
+
+        <article>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati non consectetur minima accusantium excepturi laboriosam distinctio impedit et autem maxime nemo, alias aspernatur aliquam assumenda! Tenetur sint, iure vel ea molestias repellat saepe voluptatum assumenda qui totam! Enim iusto ipsam, incidunt blanditiis et recusandae adipisci repellendus voluptatibus temporibus vel ad molestias, earum quasi quaerat aspernatur aliquid, illo odio id? Sint impedit, odit provident quia officiis dolores ab necessitatibus eius eligendi alias molestias, exercitationem nostrum et. Praesentium aut odio aliquam temporibus vero ipsam totam vitae ab. Maxime odit recusandae minus, adipisci eveniet inventore dicta aperiam fugiat ullam reprehenderit ipsam, sunt omnis?</p>
+        </article>
+
+        <aside class="left">
+            <ul>
+                <li><a href="#">Mission</a></li>
+                <li><a href="#">History</a></li>
+                <li><a href="#">Team</a></li>
+                <li><a href="#">Contact Us</a></li>
+            </ul>
+        </aside>
+        
+        <aside class="right">
+            <p><strong>Special Promo</strong></p>
+            <p>The best choice to The best future.</p>
+        </aside>
+    </section>
+    <footer>
+        <p>
+            Copyright information usually goes down here.
+        </p>
+    </footer>
+</body>
+</html>

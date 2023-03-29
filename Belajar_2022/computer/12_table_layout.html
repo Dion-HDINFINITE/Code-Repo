@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table Layout</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        float: left;
+        width: 100%;
+        background-color: cadetblue;
+    }
+
+    header > img, header > h1 {
+        margin-right: 10px;
+        display: inline;
+    }
+
+    header > img {
+        width: 95px;
+        height: 95px;
+    }
+
+    footer {
+        width: 100%;
+        background-color: rebeccapurple;
+        text-align: center;
+        font-style: italic;
+    }
+
+    section.main {
+        width: 100%;
+        display: table;
+    }
+
+    article, aside.left, aside.right {
+        display: table-cell;
+    }
+
+    aside.left {
+        width: 200px;
+        background-color: violet;
+    }
+
+    aside.right {
+        width: 125px;
+        background-color: aquamarine;
+    }
+
+</style>
+<body>
+    <header>
+        <img src="catt0.jpg" alt="">
+        <h1>WELCOME TO A WEBSITE</h1>
+    </header>
+    <section class="main">
+        <aside class="left">
+            <ul>
+                <li><a href="#">Missiono</a></li>
+                <li><a href="#">Historyono</a></li>
+                <li><a href="#">Teamono</a></li>
+                <li><a href="#">contact usono</a></li>
+            </u>
+        </aside>
+        <article>
+            <P>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla aliquam, dolorum aperiam quod modi quas, assumenda placeat illum beatae animi iure provident expedita quasi numquam, veniam sint sequi libero ut molestiae et vel impedit. Amet harum veritatis optio! Est ea ducimus rem quisquam eius. Excepturi expedita omnis et temporibus facere error sint culpa dignissimos. Autem ratione incidunt recusandae? Eum obcaecati, neque repellat voluptatem ipsam, corporis, doloremque adipisci sed at est hic in ab blanditiis quis. Aperiam ab voluptatum debitis corrupti!
+            </P>
+        </article>
+        <aside class="right">
+            <p>
+                Special Promo
+            </p>
+            <p>
+                The Second choice to the best future ;)
+            </p>
+        </aside>
+    </section>
+    <footer>
+        THOU SHALL NOT CTRL + C AND CTRL + V THIS CONTENT
+    </footer>
+</body>
+</html>

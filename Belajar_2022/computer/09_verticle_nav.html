@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verticle Navigation</title>
+    <style>
+        body {
+            font: 12pt, Helvetica, sans-serif;
+        }
+
+        nav {
+            width: 150px;
+            float: left;
+            margin-right: 20px;
+            margin-top: 5px;
+        }
+
+        nav ul {
+            list-style-type: none;
+        }
+
+        nav ul li {
+            border-bottom: 1px solid black;
+        }
+
+        nav ul li a:link, nav ul li a:visited {
+            background-color: cadetblue;
+            color: white;
+            display: block;
+            font-weight: bold;
+            padding: 3px 0px 3px 3px;
+            font-size: 10pt;
+            padding-top: 3px;
+            padding-bottom: 3px;
+        }
+
+        nav ul li a:hover, nav ul li a:active {
+            background-color: white;
+            color: black;
+            display: block;
+            font-weight: bold;
+            padding: 3px 0px 3px 3px;
+            font-size: 10pt;
+            padding-top: 3px;
+            padding-bottom: 3px;
+        }
+
+        nav ul ul {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        nav ul ul li a {
+            padding-left: 0px;
+        }
+
+        section.main {
+            width: 800px;
+            float: left;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="#">Mission</a></li>
+            <li><a href="#">History</a></li>
+            <li><a href="#">Executive Team</a></li>
+                <ul>
+                    <li><a href="#">&raquo; CEO</a></li>
+                    <li><a href="#">&raquo; CFO</a></li>
+                    <li><a href="#">&raquo; COO</a></li>
+                    <li><a href="#">&raquo; Other</a></li>
+                </ul>
+            <li><a href="#">Contact US</a></li>
+        </ul>
+    </nav>
+    <section class="main">
+        <header>
+            <hr>
+            <h1>About Us</h1>
+            <hr>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ut iure aliquid facilis nemo recusandae deleniti quo sequi, soluta illum consectetur, sint nulla provident in placeat incidunt beatae sit dicta quam.</p>
+            <ul>
+                <li>
+                    <p>
+                        <a href="#">Mission</a>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti pariatur recusandae deleniti magni laudantium tenetur dolore illum quasi totam debitis, saepe dicta aliquid quisquam harum sit perspiciatis? Modi, animi aut!
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <a href="#">History</a>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti pariatur recusandae deleniti magni laudantium tenetur dolore illum quasi totam debitis, saepe dicta aliquid quisquam harum sit perspiciatis? Modi, animi aut!
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <a href="#">Executive Team</a>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti pariatur recusandae deleniti magni laudantium tenetur dolore illum quasi totam debitis, saepe dicta aliquid quisquam harum sit perspiciatis? Modi, animi aut!
+                    </p>
+                </li>
+                <li>
+                    <p>
+                        <a href="#">About Us</a>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Corrupti pariatur recusandae deleniti magni laudantium tenetur dolore illum quasi totam debitis, saepe dicta aliquid quisquam harum sit perspiciatis? Modi, animi aut!
+                    </p>
+                </li>
+            </ul>
+        </header>
+    </section>
+</body>
+</html>

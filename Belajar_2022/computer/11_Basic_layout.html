@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Layout</title>
+    <style>
+
+        body {
+            padding: 0;
+            margin: 0;
+            height: 1vh;
+        }
+
+        header {
+            width: 100%;
+            height: 50px;
+            background-color: powderblue;
+            padding: 3px 0px 3px 3px;
+        }
+
+        header > img {
+            height: 50px;
+            display: inline;
+        }
+
+        header > h1 {
+            display: inline;
+        }
+
+        section.main {
+            float: left;
+            padding-left: 600px;
+            padding-right: 125px;
+        }
+
+        section.main aside.left {
+            float: left;
+            width: 200px;
+            background-color: lightgreen;
+            margin-left: -100%;
+            right: 200px;
+            margin-bottom: -2000px;
+            padding-bottom: 2000px;
+        }
+
+        section.main aside.left ul li {
+            list-style-type: none;
+        }
+
+        section.main aside.left ul li a {
+            text-decoration: none;
+        }
+
+        section.main aside.left ul li a:hover {
+            background-color: antiquewhite;
+        }
+
+        section.main article {
+            float: left;
+            width: 500px;
+        }
+
+        section.main aside.right {
+            float: left;
+            width: 125px;
+            background-color: pink;
+            margin-right: -125px;
+            margin-bottom: -2000px;
+            padding-bottom: 2000px;
+        }
+
+        footer {
+            float: left;
+            width: 100%;
+            height: 20px;
+            background-color: grey;
+            text-align: center;
+            font-style: italic;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="catt0.jpg" alt="">
+        <h1>WELCOME TO A WEBSITE</h1>
+    </header>
+    <section class="main">
+        <article>
+            <P>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nulla aliquam, dolorum aperiam quod modi quas, assumenda placeat illum beatae animi iure provident expedita quasi numquam, veniam sint sequi libero ut molestiae et vel impedit. Amet harum veritatis optio! Est ea ducimus rem quisquam eius. Excepturi expedita omnis et temporibus facere error sint culpa dignissimos. Autem ratione incidunt recusandae? Eum obcaecati, neque repellat voluptatem ipsam, corporis, doloremque adipisci sed at est hic in ab blanditiis quis. Aperiam ab voluptatum debitis corrupti!
+            </P>
+        </article>
+        <aside class="left">
+            <ul>
+                <li><a href="#">Missiono</a></li>
+                <li><a href="#">Historyono</a></li>
+                <li><a href="#">Teamono</a></li>
+                <li><a href="#">contact usono</a></li>
+            </u>
+        </aside>
+        <aside class="right">
+            <p>
+                Special Promo
+            </p>
+            <p>
+                The Second choice to the best future ;)
+            </p>
+        </aside>
+    </section>
+    <footer>
+        THOU SHALL NOT CTRL + C AND CTRL + V THIS CONTENT
+    </footer>
+</body>
+</html>

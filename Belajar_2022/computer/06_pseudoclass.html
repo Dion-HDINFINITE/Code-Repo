@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Class Selector Anchor</title>
+    <style type="text/css">
+
+        body {
+            font-family: Verdana, sans-serif;
+            font-weight: bold;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        a:link {
+            color: lightblue;
+        }
+
+        a:visited {
+            color: purple;
+        }
+
+        a:hover {
+            color: red;
+        }
+
+        a:focus {
+            color: black;
+        }
+
+        a:active {
+            color: green;
+        }
+        a.footer-link:hover {
+            color: lightsalmon;
+        }
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Sample Link Style</h1>
+    </header>
+    <section class="main">
+        <ol>
+            <li>
+                <a href="http://www.google.com/" target="_blank"> The first time me i should be a light blue, bold, non underlink in the verdana font</a>
+            </li>
+            <li>
+                <a href="#"> The first time me i should be a light blue, bold, non underlink in the verdana font </a>
+            </li>
+        </ol>
+    </section>
+    <footer>
+        <p>
+            Contact US : <a href="dionfebrianhalim05@gmail.com" class="footer-link">dionfebrianhalim05@gmail.com</a>
+        </p>
+    </footer>
+</body>
+</html>
