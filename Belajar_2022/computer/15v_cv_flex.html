@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV THING</title>
+</head>
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+    }
+
+    header {
+        float: left;
+        width: 100%;
+        background-color: cadetblue;
+    }
+    
+    header > nav {
+        background-color: yellow;
+    }
+
+    header nav ul.container {
+        list-style-type: none;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+
+    header nav ul li {
+        display: inline;
+    }
+
+    header nav ul li a {
+        text-decoration: none;
+    }
+
+    header > h1 {
+        background-color: aliceblue;
+    }
+
+    footer {
+        width: 100%;
+        background-color: rebeccapurple;
+        text-align: center;
+        color: wheat;
+        font-style: italic;
+    }
+
+    section.main {
+        width: 100%;
+        /* display: table; */
+        display: flex;
+    }
+
+    aside.left {
+        display: flex;
+        width: 400px;
+        height: 500px;
+        background-color: violet;
+        justify-content: center;
+        align-content: center;
+        flex-direction: column;
+        
+    }
+
+    aside.left > p {
+        border: 5px solid #555;
+        text-align: center;
+        background-color: cadetblue;
+        margin-left: 98px;
+        margin-right: 98px;
+    }
+
+    aside.left > img {
+        border-radius: 30%;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        border: 5px solid yellow;
+        -webkit-filter: saturate(50%);
+        filter: saturate(50%);
+    }
+
+    aside.left > img:hover {
+        transform: rotateZ(270deg);
+        transition-duration: 0.2s;
+    }
+
+    aside.right {
+        width: 900px;
+        background-color: coral;
+    }
+
+    aside.right > div.container-grid {
+        height: 440px;
+        background-color: darkcyan;
+        grid-template-columns: auto auto auto;
+        padding: 15px;
+        margin: 15px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+
+    aside.right > div.container-grid > div.grid-item {
+        background-color: indianred;
+        margin: 8px 8px 8px 8px;
+        text-align: center;
+        font-weight: bold;
+        font-style: italic;
+
+    }
+
+    nav > ul.container > li > a:hover {
+        background-color: blueviolet;
+    }
+
+    nav > ul.container > li > a:visited {
+        background-color: cadetblue;
+    }
+
+    nav > ul.container > li > a:active {
+        background-color: white;
+    }
+
+</style>
+<body>
+    <header>
+        <!-- <img src="catt0.jpg" alt=""> -->
+        <h1 style="text-align: center;">WELCOME TO A WEBSITE</h1>
+        <nav>
+            <ul class="container">
+                <li><a href="#">HOME</a></li>
+                <li><a href="#">ABOUT ME</a></li>
+                <li><a href="#">INSTA</a></li>
+                <li><a href="#">GIT HUB</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="main">
+        <article>
+        </article>
+        <aside class="left">
+            <img src="catt0.jpg" style="margin: 15px;">
+            <p>
+                Name : Dion
+            </p>
+            <p>
+                Umur : 400
+            </p>
+            <p>
+                gender : male
+            </p>
+        </aside>
+        <aside class="right">
+            <div class="container-grid">
+
+
+                <div class="grid-item">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Corporis dolorum nemo amet accusamus officia quo quasi dicta, ipsum consequatur nulla praesentium? Voluptas explicabo voluptatem totam repellendus et. Officia distinctio facere iusto ratione enim, voluptates consequuntur atque nihil magnam cupiditate natus aspernatur cumque neque libero error repellat consequatur. Nisi voluptate, exercitationem eaque iusto rem natus eos fugit sapiente quam incidunt reprehenderit. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod natus amet ullam maxime minima adipisci expedita porro quasi facilis aliquam?</div>
+                <div class="grid-item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Possimus saepe excepturi, quo minima maiores itaque! Iste, provident pariatur. Nisi reprehenderit vitae saepe expedita optio unde, enim tempore inventore sit est impedit deserunt similique illo! Voluptatem perferendis nam cumque ullam expedita, ratione magnam accusantium atque id ipsum. Eveniet nulla odit modi magnam quod perspiciatis. Obcaecati deleniti doloremque eveniet saepe hic nisi? Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas consectetur doloribus unde cupiditate reiciendis nam non odio fugiat eveniet laudantium?</div>
+                <div class="grid-item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Temporibus impedit iste culpa soluta totam quibusdam sapiente illum fuga provident repellendus quaerat maxime quas vero aliquid delectus doloremque assumenda nobis magni unde exercitationem, at veritatis suscipit eius. Laboriosam, sint dicta! Quisquam, sit libero? Aliquam voluptates quo explicabo natus velit! Fugiat molestias, quaerat magni deserunt veniam accusamus ratione tenetur aperiam iusto. Nemo. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Tenetur est rem sint vero voluptatibus repellendus natus id quasi voluptatem magnam.</div>
+
+            </div>
+        </aside>
+    </section>
+    <footer>
+        THOU SHALL NOT CTRL + C AND CTRL + V THIS CONTENT
+    </footer>
+</body>
+</html>

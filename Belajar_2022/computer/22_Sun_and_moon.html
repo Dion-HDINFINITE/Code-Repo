@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sliding headline</title>
+</head>
+<style>
+    body { 
+        background-color: aquamarine;
+        margin: 0;
+        overflow-y: hidden;
+        animation: sky 10.1s infinite;
+    }
+
+    body > img {
+        width: 2200px;
+        height: 2000px;
+        margin-left: 25%;
+        margin-top: 00px;
+        position: absolute;
+    }
+
+    .box {
+        height: 10rem;
+        width: 10rem;
+        margin-top: 28rem;
+        margin-left: 50%;
+        background-color: yellow;
+        border-radius: 5rem;
+        position: relative;
+        animation: moving 10s infinite;
+        animation-direction: normal;
+    }
+
+    @keyframes sky {
+        0% {
+            background-color: aquamarine;
+        }
+
+        25% {
+            background-color: orange;
+        }
+
+        50% {
+            background-color: black;
+        }
+
+        75% {
+            background-color: orange;
+        }
+
+        100% {
+            background-color: aquamarine;
+        }
+    }
+
+    @keyframes moving {
+        0% {
+            transform: scale(2.0);
+            background-color: yellow;
+            left: 0px;
+            top: 0px;
+        }
+
+        25% {
+            transform: scale(0.8);
+            left: 0px;
+            top: 2000px;
+        }
+
+        50% {
+            transform: scale(0.8);
+            box-shadow: -20px 0 0 15px whitesmoke;
+            border-radius: 50%;
+            background-color: black;
+            left: 0px;
+            top: -150px;
+        }
+
+        75% {
+            transform: scale(0.8);
+            box-shadow: -20px 0 0 15px whitesmoke;
+            border-radius: 50%;
+            background-color: black;
+            left: 0px;
+            top: 2000px;
+        }
+
+        100% {
+            transform: scale(2.0);
+            background-color: yellow;
+            box-shadow: -20px 0 0 15px yellow;
+            left: 0px;
+            top: 0px;
+        }
+        
+    }
+</style>
+<body>
+    <div class="box">
+
+    </div>
+    <img src="city.png">
+</body>
+</html>

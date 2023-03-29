@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sun and Moon</title>
+</head>
+<style>
+
+body {
+	height: 100%;
+	width: 100%;
+  background: black;
+}
+
+#Sun {
+	height: 200px;
+	width: 200px;
+	background: radial-gradient(#F5C313, #EC7E08);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	border-radius: 100%;
+	margin-top: -100px;
+	margin-left: -100px;
+	animation: SunFire 4s infinite alternate;  
+}
+
+#EarthOrbit {
+	height: 600px;
+	width: 500px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-top: -300px;
+	margin-left: -250px;	
+	border-radius: 100%;
+	animation: Rotation 30s linear infinite;
+}
+
+#Earth {
+	position: absolute;
+	top: 50%;
+	left: 0;
+	height: 80px;
+	width: 80px;
+	margin-top: -40px;
+	animation: Rotation 3s linear infinite;
+}
+
+#MoonOrbit {
+	height: 120px;
+	width: 120px;
+	position: absolute;
+	top: 50%;
+	left: -20px;
+	margin-top: -60px;
+	border-radius: 100%;
+	animation: Rotation 5s linear infinite reverse;
+}
+
+#Moon {
+	height: 20px;
+	width: 20px;
+	background: radial-gradient(#DDD, #888);
+	border-radius: 100%;	
+}
+
+@-webkit-keyframes Rotation {
+	from {-webkit-transform: rotate(0);transform: rotate(0);}
+	to {-webkit-transform: rotate(360deg);transform: rotate(360deg);}	
+}
+
+@keyframes Rotation {
+	from {-webkit-transform: rotate(0);transform: rotate(0);}
+	to {-webkit-transform: rotate(360deg);transform: rotate(360deg);}	
+}
+</style>
+<body>
+		<div id="Stars"></div>
+        <div id="Sun"></div>
+        	<div id="EarthOrbit">
+            	<img id="Earth" src="planet-earth-png-8-removebg-preview.png" alt="Rotating Earth">
+                	<div id="MoonOrbit">
+                    	<div id="Moon"></div>
+                    </div>
+            </div>
+  </body>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transfoirm</title>
+</head>
+<style>
+    .container {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    .box {
+        margin: 5px 0;
+        width: 10rem;
+        height: 15rem;
+        border: solid 2px aqua;
+        border-radius: 3rem;
+        background: linear-gradient(yellow, white);
+    }
+
+    .two {
+        transform-origin: left bottom;
+    }
+
+    .six {
+        width: 10rem;
+        height: 10rem;
+        border-radius: 5rem;
+    }
+
+    .two:hover {
+        transform: rotate(90deg);
+        transition-duration: 2s;
+        transition-timing-function: linear;
+    }
+
+    .three:hover {
+        transform: scale(1.2);
+        transition-duration: 1s;
+    }
+
+    .four:hover {
+        transform: translate(50px, 10px);
+        transition-duration: 1s;
+    }
+
+    .five:hover {
+        transform: rotate(-30deg) scale(1.5) translate(15px, 0);
+        transition-duration: 1s;
+    }
+
+    .six:hover {
+        transform: scale(1.2);
+        transition-duration: 1s;
+    }
+</style>
+<body>
+    <div class="container">
+        <div class="box one">
+
+        </div>
+        <div class="box two">
+            
+        </div>
+        <div class="box three">
+            
+        </div>
+        <div class="box four">
+            
+        </div>
+        <div class="box five">
+            
+        </div>
+        <div class="box six">
+            
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+        .container {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+        }
+
+        .box {
+            width: 10rem;
+            height: 10rem;
+            background-color: royalblue;
+            justify-content: center;
+            margin-top: 13rem;
+        }
+
+        div.box.clicked {
+            transform: rotate(360deg);
+            transition: 0.1s linear;
+        }
+</style>
+<script type="text/javascript">
+    // const clickedBox = function () {
+    //     document.querySelector(".box").classList.toggle("clicked");
+    // }
+
+    document.addEventListener('DOMContentLoaded', () => {
+        // document.querySelector(".box").onclick = function {
+        //     document.querySelector('.box').classList.toggle("clicked")
+        // }
+        
+        document.querySelector(".box").addEventListener("click", function() {
+        this.classList.toggle("clicked")
+    })
+    })
+
+</script>
+<body>
+        <div class="container">
+        <div class="box" >
+            <!-- onclick="clickedBox()" -->
+        </div>
+    </div>
+</body>
+</html>
