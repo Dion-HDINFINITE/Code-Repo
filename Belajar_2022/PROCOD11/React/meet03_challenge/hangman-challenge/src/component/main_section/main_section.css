@@ -1,0 +1,30 @@
+
+body {
+    background: url(./bacc.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+h1 {
+    color: red;
+    background-color: black;
+}
+
+.Hangman {
+    text-align: center;
+    height: 100vh;
+    font-family: sans-serif;
+  }
+  
+  .button {
+    width: 150px;
+    height: 50px;
+    background-color: orange;
+    font-size: 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .title {
+    padding-top: 50px;
+  }
