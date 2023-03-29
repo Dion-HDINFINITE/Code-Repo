@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Basic 2</title>
+</head>
+<body>
+    <canvas width="400" height="400" id="canvas" style="background-color: grey;"></canvas>
+    <script type="text/javascript">
+        let canvas = document.getElementById("canvas");
+        let ctx = canvas.getContext("2d");
+
+        ctx.fillstyle = "black";
+        for (let i = 0; i <= 400; i += 20){
+            ctx.fillRect(i, i, 20, 20);
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <canvas id="canvas" width="800" height="800" style="background-color: grey;"></canvas>
+    <script type="text/javascript">
+        let canvas = document.getElementById("canvas");
+        let ctx = canvas.getContext("2d");
+
+
+        let circle = function (x, y, radius, color, isFilled) {
+            ctx.strokeStye = color;
+            ctx.beginPath();
+            ctx.arc(x, y, radius, 0, 2*Math.PI, false);
+            ctx.closePath();
+            ctx.stroke();
+            if (isFilled){
+                ctx.fillStyle = color;
+                ctx.fill();
+            }
+        }
+
+        let line = function (initX, initY, finalX, finalY, color, width=10) {
+            ctx.strokeStyle = color;
+            ctx.lineWidth = width;
+
+            ctx.beginPath();
+            ctx.moveTo(initX, initY);
+            ctx.lineTo(finalX, finalY);
+            ctx.closePath();
+            ctx.stroke();
+        }
+
+        let hangman = function (x, y, color) {
+            //body
+        }
+
+        hangman(300, 300, "Green")
+
+    </script>
+</body>
+</html>

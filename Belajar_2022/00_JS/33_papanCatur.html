@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Papan Catur</title>
+</head>
+<body>
+	<canvas width="800" height="800" id="canvas" style="background-color: grey;"></canvas>
+	<script type="text/javascript">
+		let canvas = document.getElementById("canvas");
+		let ctx = canvas.getContext("2d");
+		const width = canvas.width/8
+
+		// baris genap - > p-h-p-h
+		// baris ganjil -> h-p-h-p
+
+		
+		// let fill;
+
+		for (let row = 0; row < 8; row++){
+			for(let col = 0; col < 8; col++){
+				if (row % 2 === 0){
+					if (col % 2 == 0){
+						ctx.fillStyle = "White";
+					} else {
+						ctx.fillStyle = "Black";
+					}	
+				} else {
+					if (col % 2 != 0){
+						ctx.fillStyle = "White";
+					} else {
+						ctx.fillStyle = "Black";
+					}
+				}
+			
+				ctx.fillRect(col*width, row*width, width, width);
+			}
+		}
+
+		
+	</script>
+</body>
+</html>

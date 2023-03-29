@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Playing with Jquery</title>
+</head>
+<body>
+	<h1 id="main-heading">Hello World!</h1>
+
+	<!-- ordered list -->
+	<ol>
+
+	</ol>
+
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript">
+		let newText = prompt("New text please : ")
+		$("#main-heading").text(newText);
+
+		let newParagraph = "<p>I Love Javascript</p>";
+
+		$("body").append(newParagraph);
+
+		// for (let i = 0; i < 3; i+=1){
+		// 	let hobby = prompt("Tell me your hobbies ...")
+
+		// 	$('ol').append(`<li>${hobby}</li>`);
+		// }
+
+		let hobby = prompt("Tell me your hobbies ... (type stop to stop asking)")
+		while (hobby !== "stop") {
+			$('ol').append(`<li>${hobby}</li>`);
+			hobby = prompt("Tell me your hobbies ... (type stop to stop asking)")
+		}
+
+
+	</script>
+</body>
+</html>

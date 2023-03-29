@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Change Color</title>
+</head>
+<body>
+	<h1 id="header">Hello .....</h1>
+	<button id="red">Red</button>
+	<button id="green">Green</button>
+	<button id="blue">Blue</button>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+	<script type="text/javascript">
+		$("#red").click( ()=> { $("#header").css('color', 'red') });
+		$("#green").click( ()=> { $("#header").css('color', 'green') });
+		$("#blue").click( ()=> { $("#header").css('color', 'blue') });
+	</script>
+</body>
+</html>

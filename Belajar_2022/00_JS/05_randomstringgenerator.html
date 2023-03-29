@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Random String Generator</title>
+</head>
+<body>
+	<script type="text/javascript">
+		var alphabet = "abcdefghijklmnopqrstuvwxyz";
+		var randomString = ""; // len = 8 contoh output : "xvdfgqaa"
+
+		for (var i = 0; i < 8; i++){
+			char = alphabet[Math.floor(Math.random()*alphabet.length)];
+			randomString += char;
+		}
+
+		console.log(randomString);
+	</script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Event 2</title>
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+	<h2 id="heading-alien">Hello Aliens</h2>
+	<button>Click There!</button>
+	<button>Click There Dor!</button>
+	<button>Click There Dear Dor!</button>
+
+	<script type="text/javascript">
+		document.querySelector("button").innerHTML = "Click There There!";
+
+		var buttons = document.querySelectorAll("button");
+
+		buttons[1].innerHTML = "Click There 2";
+
+		// document.querySelector("#heading-alien").innerHTML = "Hello Alien Alien"
+		$("#heading-alien").text("Hello Alien Alien");
+	</script>
+</body>
+</html>

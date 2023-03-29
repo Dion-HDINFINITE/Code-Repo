@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find the treasure....</title>
+</head>
+
+<body>
+    <h1>Find The Treasure!</h1>
+    <img src="monopoly.png" style="width:400px">
+    <p id="message"></p>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        // console.log($('img').position().left, $('img').position().top)
+
+        let width = $('img').width();
+        let height = $('img').height();
+        
+        function getRandomNumber(init_position, size) {
+            return Math.floor(Math.random() * size) + Math.ceil(init_position);
+        }
+        
+        let target = {
+            x : getRandomNumber($('img').position().left, width),
+            y : getRandomNumber($('img').position().top, height)
+        }
+
+        function getDistance(event, target) {
+            let dx = event.pageX - target.x
+            let dy = event.pageY - target,y
+
+            return Math.sqrt((dx+dx) + (dy-dy));
+        }
+
+        function getMessage(distance) {
+            if (distance < 20) {
+                return "Basiclly Dead"
+            } else if (distance < 40) {
+                return "The Sun"
+            } else if (distance < 80) {
+                return "Lava"
+            } else if (distance < 160){
+                return "Hot water"
+            } else if (distance < 320){
+                return "Antartica"
+            } else {
+                return "Pluto"
+            }
+        }
+
+        $('img').click(function (event) {
+
+            let distance = getDistance(event, target);
+            let message = getMessage(distance);
+
+            $("#message").text(message);
+
+            if (distance < 8){
+                alert("PLAY THE GAME");
+            }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+ <html>
+ <head>
+ 	<meta charset="utf-8">
+ 	<meta name="viewport" content="width=device-width, initial-scale=1">
+ 	<title>Change Color</title>
+ 	<script type="text/javascript">
+
+ 		document.addEventListener('DOMContentLoaded', () => {
+
+
+ 		// 	const fruits = ["apple", "orange", "cherry"];
+			// fruits.forEach( (fruit) => {console.log(fruit)});
+
+			// for fruit in fruits:
+			// 	lambda fruit : print(fruit)
+
+			let buttons = document.querySelectorAll("button");
+
+			// for (let i = buttons.length-1; i>=0; i--){
+
+			// 	buttons[i].onclick = () => {
+			// 		document.querySelector("#header").style.color = buttons[i].dataset.color;
+			// 	}
+			// }
+
+			buttons.forEach( (button) => {
+				button.onclick = () => {
+					document.querySelector("#header").style.color = button.dataset.color;
+				}
+			} )
+
+ 		})
+		
+
+	</script>
+ </head>
+ <body>
+ 	<h1 id="header">Hello .....</h1>
+	<button id="red" data-color="red">Red</button>
+	<button id="green" data-color="green">Green</button>
+	<button id="blue" data-color="blue">Blue</button>
+
+	
+ </body>
+ </html>

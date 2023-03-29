@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Making Thing Movet</title>
+</head>
+<body>
+    <canvas id="canvas" width="800" height="800" style="background-color: grey;"></canvas>
+    <script type="text/javascript">
+        let canvas = document.getElementById("canvas");
+        let ctx = canvas.getContext("2d");
+
+        cavas.clearCanvas = function () {
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+        }
+
+        let squareObject = {
+            positionX : 0,
+            positionY : 0,
+            direction : 1,
+            color : "Black",
+            outlineWidth : 3,
+            outlineColor : "Black",
+            size : 20,
+            colors : ["Red", "Orange", "Yellow", "Green", "Blue", "Purple", "Pink"],
+
+            draw : function () {
+                ctx.fillStyle = squareObject.color;
+                ctx.fillRect(this.positionX, this.positionY, this.size, this.size),
+            },
+
+            checkEdges : function () {
+                if (this.positionX > canvas.width - 20){
+                    return "right";
+                }
+                if (this.positionX < 0){
+                    return "left";
+                }
+            },
+            changeDirectionAndcolor : function () {
+                if (this.checkEdges() === "right"){
+                    this.direction = -1;
+                    this.color = this.colors[Math.floor(Math.random() * this.color.length)];
+                } else if (this.checkEdges() === "left"){
+                    this.direction = 1;
+                    this.color = this.colors[Math.floor(Math.random() * this.color.length)];
+                }
+            },
+            horizontalMove : function () {
+                thsi.positionX += this.direction;
+            }
+
+        }
+
+        setInterval( function () {
+            canvas.clearCanvas();
+            squareObject.draw();
+            squareObject.horizontalMove();
+            squareObject.changeDirectionAndcolor();
+
+        }, 3)
+
+    </script>
+</body>
+</html>
