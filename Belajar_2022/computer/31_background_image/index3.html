@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+
+    div {
+        margin: 10px auto;
+
+        height: 600px;
+        width: 80%;
+
+        max-width: 500px;
+
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+
+    .inner {
+        width: 100%;
+        height: 600px;
+        overflow-y: hidden;
+    }
+
+    .gap {
+        margin-bottom: 50rem;
+    }
+    .scroll, .fixed, .local {
+        background-image: url('moonz.jpg');
+    }
+
+    .scroll {
+        background-attachment: scroll;
+    }
+
+    .fixed {
+        background-attachment: fixed;
+    }
+
+    .local {
+        background-attachment: local;
+    }
+
+    h1 {
+        color: white;
+    }
+</style>
+<body>
+    <div class="scroll">
+        <div class="inner"><h1>Scroll</h1></div>
+    </div>
+    <div class="fixed">
+        <div class="inner"><h1>Fixed</h1></div>
+    </div>
+    <div class="local">
+        <div class="inner"><h1>Local</h1></div>
+    </div>
+
+    <p class="gap"></p>
+</body>
+</html>
