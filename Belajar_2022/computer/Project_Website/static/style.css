@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+}
+
+header nav ul.menu-nav li a:hover {
+    color: blue;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+header nav{
+    display: flex;
+    background-color: #ed5e89;
+    color: white;
+    justify-content: space-around;
+    height: 50px;
+    align-items: center;
+}
+
+
+header nav .nav-logo {
+    display: flex;
+    justify-content: space-between;
+}
+
+header nav .nav-logo h1 {
+    color: white;
+    margin-left: 8px;
+    margin-top: 2px;
+}
+
+header nav .nav-logo .ribbon_logo {
+    display: flex;
+    height: 40px;
+    width: auto;
+}
+
+header nav ul {
+    display: flex;
+    list-style: none;
+    width: 40%;
+    justify-content: space-between;
+}
+
+header nav ul li a {
+    color: whitesmoke;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+header nav ul li a:hover {
+    color: white;
+    text-decoration: none;
+    font-size: 0.8rem;
+}
+
+.btn-login {
+    height: 28px;
+    width: 120px;
+    background-color: #e3e2df;
+    color: #5d001e;
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    padding: 5px 30px;
+    border-radius: 30px;
+    font-family:  'Source Sans Pro', sans-serif;
+    transition: 2s;
+    display: flex;
+    align-items: center;
+}
+
+.btn-login:hover {
+    background-color: #b6b6b1;
+    color: #340010;
+    transform: scale(1.2);
+}
+
+.menu-toggle{
+    display: none;
+}
+
+.menu-toggle span{
+    display: block;
+    width: 20px;
+    height: 3px;
+    background:  #e3e2df;
+    border-radius: 9rem;
+}
+
+section.hero {
+    display: flex;
+    height: 100vh;
+    width: 100%;
+    background: black url('../static/img/ribbon-pink-bow-breast-cancer-awareness-ribbon-bow-wallpaper-pattern-with-copy-space_556176-443.jpg') center / cover no-repeat;
+    flex-direction: column;
+    justify-content: center;
+}
+
+section.hero .hero-content {
+    justify-content: center;
+
+
+}
+
+section.hero .hero-content h1,h3 {
+    text-align: center;
+    color:  #5d001e;
+}
+
+section.hero .hero-content h1 {
+
+    margin: 20px 8px 20px;
+    font-size: 3rem;
+}
+
+section.hero .hero-content h3 {
+    margin: 20px 8px 20px;
+    font-size: 25px ;
+}
+
+section.hero .hero-content h3:after {
+    content: ' , Do your part against the war on cancer!';
+}
+
+section.hero .hero-content .hero-form {
+    display: flex;
+    position: ab;
+    width: 200px;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+section.hero .hero-content .hero-form input:first-child {
+    width: 100%;
+    padding: 14px 13px 14px 15px;
+    border: 2px solid rgb(238, 76, 124);;
+    border-radius: 30px;
+    margin-bottom: 10px;
+}
+
+section.hero .hero-content .hero-form input:last-child {
+    padding: 15px 20px;
+    border: 2px solid rgb(238, 76, 124);
+    border-radius: 30px;
+    margin-bottom: 10px;
+    background-color: #ee4c7c;
+    color: white;
+    margin-left: 26%;
+    transition: 2s;
+}
+
+section.hero .hero-content .hero-form .enter:hover {
+    transform: scale(1.2);
+    
+}
+
+section.about .about-content {
+    display: flex;
+    width: 100%;
+    height: 29rem;
+    background:  #5d001e;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+section.about .about-content h2 {
+    margin-top: 1rem;
+    font-size: 12px;
+}
+
+section.about .about-content .about-card {
+    width: 20%;
+    height: 5rem;
+    box-sizing: border-box;
+    margin-right: 5rem;
+}
+
+section.about .about-content .about-card img {
+    width: 350px;
+    height: 450px;
+    margin-top: -14rem;
+}
+
+section.about .about-content .about-text{
+    display: flex;
+    width: 40%;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+section.about .about-content .about-text h2{
+    text-align: center;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    color: white;
+    margin-bottom: 15px;
+}
+
+section.about .about-content .about-text p{
+    text-align: justify;
+    text-transform: capitalize;
+    letter-spacing: 1px;
+    color: white;
+    margin-top: 1rem;
+}
+
+*{
+	margin:0;
+	padding:0;
+	box-sizing: border-box;
+}
+.container{
+	max-width: 1170px;
+	margin:auto;
+}
+
+.row{
+	display: flex;
+	flex-wrap: wrap;
+}
+
+ul{
+	list-style: none;
+}
+
+.footer{
+	background-color: #24262b;
+    padding: 70px 0;
+}
+
+.footer-content{
+   width: 25%;
+   padding: 0 15px;
+   justify-content: space-evenly;
+}
+
+.footer-content h4{
+	font-size: 18px;
+	color: #ffffff;
+	text-transform: capitalize;
+	margin-bottom: 35px;
+	font-weight: 500;
+	position: relative;
+}
+
+.footer-content ul li:not(:last-child){
+	margin-bottom: 10px;
+}
+
+.footer-content ul li a{
+	font-size: 16px;
+	text-transform: capitalize;
+	color: #ffffff;
+	text-decoration: none;
+	font-weight: 300;
+	color: #bbbbbb;
+	display: block;
+	transition: all 0.3s ease;
+}
+.footer-content ul li a:hover{
+	color: #ffffff;
+	padding-left: 8px;
+}
+
+@media(max-width: 767px){
+  .footer-content{
+    width: 50%;
+    margin-bottom: 30px;
+}
+}
+
+@media screen and (max-width: 576px) {
+
+    header nav ul.menu-nav {
+        flex-direction: column;
+        justify-content: space-evenly;
+        position: absolute;
+        background-color: rgba(95, 3, 32, 0.8);
+        height: 100vh;
+        width: 25%;
+        top: 0;
+        right: 0;
+        margin-top: 50px;
+        padding-left: 10px;
+        transform: translateX(100%);
+        animation: all 1s linear;
+    }
+
+    header nav ul.menu-nav.clicked {
+        transform: translateX(0);
+    }
+
+    header nav ul.menu-nav li a:hover {
+        color: yellow;
+    }
+
+    header nav ul.menu-nav li a {
+        font-size: 17px;
+    }
+    
+    .menu-toggle {
+        display: flex;
+        flex-direction: column;
+        height: 14px;
+        justify-content: space-between;
+    }
+
+    section.about .about-content {
+        display: flex;
+        width: 100%;
+        height: 35rem;
+        background:  #5d001e;
+        flex-wrap: wrap;
+        flex-direction: row;
+        justify-content: space-evenly;
+        align-items: center;
+        padding-top: 50px;
+        padding-bottom: 50px;
+    }
+    
+    section.about .about-content h2 {
+        margin-top: 1rem;
+        font-size: 12px;
+    }
+    
+    section.about .about-content .about-card {
+        width: 20%;
+        height: 5rem;
+        box-sizing: border-box;
+        margin-right: 5rem;
+    }
+    
+    section.about .about-content .about-card img {
+        width: 150px;
+        height: 250px;
+        margin-top: -7rem;
+    }
+    
+    section.about .about-content .about-text{
+        display: flex;
+        width: 50%;
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+    
+    section.about .about-content .about-text h2{
+        text-align: center;
+        text-transform: capitalize;
+        letter-spacing: 1px;
+        color: white;
+        margin-bottom: 15px;
+    }
+    
+    section.about .about-content .about-text p{
+        text-align: justify;
+        text-transform: capitalize;
+        letter-spacing: 1px;
+        color: white;
+        margin-top: 1rem;
+    }
+    
+    *{
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+    }
+    .container{
+        max-width: 1170px;
+        margin:auto;
+    }
+    
+    .row{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    ul{
+        list-style: none;
+    }
+    
+    .footer{
+        background-color: #24262b;
+        padding: 70px 0;
+    }
+    
+    .footer-content{
+       width: 25%;
+       padding: 0 15px;
+       justify-content: space-evenly;
+    }
+    
+    .footer-content h4{
+        font-size: 18px;
+        color: #ffffff;
+        text-transform: capitalize;
+        margin-bottom: 35px;
+        font-weight: 500;
+        position: relative;
+    }
+    
+    .footer-content ul li:not(:last-child){
+        margin-bottom: 10px;
+    }
+    
+    .footer-content ul li a{
+        font-size: 16px;
+        text-transform: capitalize;
+        color: #ffffff;
+        text-decoration: none;
+        font-weight: 300;
+        color: #bbbbbb;
+        display: block;
+        transition: all 0.3s ease;
+    }
+    .footer-content ul li a:hover{
+        color: #ffffff;
+        padding-left: 8px;
+    }
+}
