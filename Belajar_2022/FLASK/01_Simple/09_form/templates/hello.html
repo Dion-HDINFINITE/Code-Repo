@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}Hello to you!{% endblock title %}
+
+{$ block main %}
+
+{% if name %}
+
+    <h1>Hello, {{ name }}</h1>
+
+{% else %}
+
+    <h1>Heloo, Strangers!</h1>
+
+{% endif %}
+{% endblock main %}

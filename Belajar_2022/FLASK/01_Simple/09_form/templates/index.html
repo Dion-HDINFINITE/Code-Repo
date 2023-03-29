@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block title %}Form Hello!{% endblock title %}
+
+{% block main %}
+
+    <h1>Submit your name....</h1>
+    <form action="{{ url_for('hello') }}">
+
+        <input type="text" name="name" placeholder="Enter your name"
+        autocomplete="off" required autofocus>
+        <button>Submit</button>
+    </form>
+
+{% endblock main %}

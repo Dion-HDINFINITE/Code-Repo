@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title %}H0ME{% endblock title %}
+
+{% block main %}
+    <h1>Hello Welcome !</h1>
+
+    <ul>
+        <li>
+            <a href="{{url_for('user', username='')}}">User Profile</a>
+        </li>
+        <li>
+            <a href="{{url_for('login')}}">Login</a>
+        </li>
+    </ul>
+{% endblock main %}
