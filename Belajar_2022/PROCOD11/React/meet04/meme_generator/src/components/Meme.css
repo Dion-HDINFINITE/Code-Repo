@@ -1,0 +1,63 @@
+
+.meme--form {
+    display: grid;
+    /* height: 30%; */
+    grid-template: auto auto / 1fr 1fr;
+    gap: 20px;
+    padding: 20px;
+}
+
+.meme--form--input {
+    border-radius: 5px;
+    border: 1px solid gainsboro;
+    height: 30px;
+}
+
+.meme--form--button {
+    height: 30px;
+    grid-column: 1 / -1;
+    border-radius: 5px;
+    border: none;
+    background-image: linear-gradient(to right, #672280, #A626D3);
+    color: white;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.meme--content {
+    position: relative;
+    width: 60%;
+    /* height: 100px; */
+    /* min-height: calc(100vh - 100px); */
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: aliceblue;
+}
+
+.meme--image {
+    /* max-height: calc(100vh - 95vh - 30% - 40px - 30px); */
+}
+
+.meme--content > h2 {
+    position: absolute;
+    width: 80%;
+    text-align: center;
+    font-size: 2.3em;
+    text-transform: uppercase;
+    color: white;
+    margin: 15px 0px;
+    padding: 0px 5px;
+    overflow-wrap: break-word;
+}
+
+.meme--top--text {
+    top : 0;
+    text-shadow: 2px 2px #ff0000;
+}
+
+.meme--bottom--text {
+    bottom : 0;
+    text-shadow: 2px 2px #ff0000;
+}

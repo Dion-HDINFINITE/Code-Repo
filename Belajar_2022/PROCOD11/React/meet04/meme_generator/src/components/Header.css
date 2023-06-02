@@ -1,0 +1,33 @@
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 65px;
+    width: 100%;
+    box-sizing: border-box;
+    background-image: linear-gradient(to right, #672280, #A626D3);
+    color: white;
+    padding: 15px 20px;
+}
+
+.header--image {
+    height: 100%;
+}
+
+.header--toggle--darkmode {
+    position: relative;
+    width: 38px;
+    height: 20px;
+    border-radius: 12px;
+    border : 1px black solid;
+    background-color: black;
+}
+
+.header--circle--darkmode {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: white;
+    left: 0;
+}
